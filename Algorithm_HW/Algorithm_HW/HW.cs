@@ -70,7 +70,7 @@ namespace Algorithm_HW
 
             #region HW 2
             #region HW 2.1
-            //HW_2_Tasks.Task1();
+            HW_2_Tasks.Task1();
             #endregion
 
             #region HW 2.2
