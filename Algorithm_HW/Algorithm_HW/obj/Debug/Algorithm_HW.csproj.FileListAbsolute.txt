@@ -1,0 +1,10 @@
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.exe.config
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.exe
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.pdb
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\HW_ClassLibrary.dll
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\HW_ClassLibrary.pdb
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csprojAssemblyReference.cache
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csproj.CoreCompileInputs.cache
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csproj.CopyComplete
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.exe
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.pdb
