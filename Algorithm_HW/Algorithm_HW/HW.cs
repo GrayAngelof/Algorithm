@@ -84,7 +84,7 @@ namespace Algorithm_HW
 
             #region HW 3
             #region HW 3.1
-            //HW_3_Tasks.Task1();
+            HW_3_Tasks.Task1();
             #endregion
 
             #region HW 3.2

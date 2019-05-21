@@ -27,5 +27,19 @@ namespace HW_ClassLibrary
             Console.WriteLine("нажмите любую клавишу");
             Console.ReadKey();
         }
+
+        /// <summary>
+        /// Вывод на экран массива
+        /// </summary>
+        /// <param name="array">Заданый массив</param>
+        public static void PrintArr(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i]);
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+        }
     }
 }

@@ -10,7 +10,26 @@ namespace Algorithm_HW
         /// </summary>
         public static void Task1()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Пузырьковая сортировка");
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            int[] bublArray = new int[amount];
+            int[] advBublArray = new int[amount];
+            Utils.RandArray(array);
+            for (int i = 0; i < array.Length; i++)
+            {
+                bublArray[i] = array[i];
+                advBublArray[i] = array[i];
+            }
+            //CL.PrintArr(array);
+
+            System.Console.WriteLine("Сортировка пузырьком");
+            Sort.BubbleSort(bublArray);
+            //CL.PrintArr(bublArray);
+            System.Console.WriteLine("Сортировка улучшеным пузырьком");
+            Sort.AdvBubbleSort(advBublArray);
+            //CL.PrintArr(advBublArray);
 
             CL.ConsolePause();
         }
