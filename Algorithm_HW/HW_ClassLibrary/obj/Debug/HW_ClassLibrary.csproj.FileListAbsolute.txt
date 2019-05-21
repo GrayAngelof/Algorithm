@@ -1,0 +1,6 @@
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\bin\Debug\HW_ClassLibrary.dll
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\bin\Debug\HW_ClassLibrary.pdb
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\obj\Debug\HW_ClassLibrary.csprojAssemblyReference.cache
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\obj\Debug\HW_ClassLibrary.csproj.CoreCompileInputs.cache
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\obj\Debug\HW_ClassLibrary.dll
+D:\geeckBrains\Repo\Algorithm\Algorithm_HW\HW_ClassLibrary\obj\Debug\HW_ClassLibrary.pdb
