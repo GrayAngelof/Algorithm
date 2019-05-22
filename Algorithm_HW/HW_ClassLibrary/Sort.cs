@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="array">Сортируемый массив</param>
         /// <returns>Отсортированый массив</returns>
-        public static int[] BubbleSort(int[] array)
+        public static void BubbleSort(int[] array)
         {
             int count = 0;
             for (int i = 0; i < array.Length; i++)
@@ -22,7 +22,6 @@
                 }
             }
             System.Console.WriteLine($"Количество итерраций:{count}");
-            return array;
         }
 
         /// <summary>
@@ -30,7 +29,7 @@
         /// </summary>
         /// <param name="array">Сортируемый массив</param>
         /// <returns>Отсортированый массив</returns>
-        public static int[] AdvBubbleSort(int[] array)
+        public static void AdvBubbleSort(int[] array)
         {
             bool action = true;
             int count = 0;
@@ -50,7 +49,48 @@
                 i++;
             }
             System.Console.WriteLine($"Количество итерраций:{count}");
-            return array;
+        }
+
+        /// <summary>
+        /// Шейкерная сортировка
+        /// </summary>
+        /// <param name="array">Сортируемый массив</param>
+        /// <returns>Отсортированый массив</returns>
+        public static void CoctailSort(int[] array)
+        {
+            int count = 0;
+            int border = 0;
+            int leftBorder = 0;
+            int rightBorder = array.Length - 1;
+            while (leftBorder < rightBorder)
+            {
+                count++;
+                for (int i = leftBorder; i < rightBorder; i++)
+                {
+                    if (array[i] > array[i + 1])
+                    {
+                        border = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = border;
+                        border = i;
+                    }
+                }
+
+                rightBorder = border;
+                if (leftBorder >= rightBorder) break;
+                for (int i = rightBorder; i > leftBorder; i--)
+                {
+                    if (array[i - 1] > array[i])
+                    {
+                        border = array[i];
+                        array[i] = array[i - 1];
+                        array[i - 1] = border;
+                        border = i;
+                    }
+                }
+                leftBorder = border;
+            }
+            System.Console.WriteLine($"Количество итерраций:{count}");
         }
     }
 }

@@ -1,78 +1,128 @@
 ﻿using HW_ClassLibrary;
+using System;
 
 namespace Algorithm_HW
 {
-    class HW_5_Tasks
+    internal class HW_5_Tasks
     {
-        #region HW 1
+        #region Menu
+        internal static void Menu()
+        {
+            Console.Clear();
+            Console.WriteLine("Выберите задание:");
+            Console.WriteLine("1 - Перевод из десятичной в двоичную систему счисления с использованием стека (WIP)");
+            Console.WriteLine("2 - Проверка на выделение памяти (WIP)");
+            Console.WriteLine("3 - Скобочная последовательность (WIP)");
+            Console.WriteLine("4 - Копирование односвязного списка (WIP)");
+            Console.WriteLine("5 - Перевод из инфиксной записи арифметического выражения в постфиксную (WIP)");
+            Console.WriteLine("6 - Реализовать очередь (WIP)");
+            Console.WriteLine("0 - Выход в меню выбора уроков");
+            int choice = Utils.IsInt();
+
+            switch (choice)
+            {
+                case 0:
+                    HW.Main();
+                    break;
+                case 1:
+                    HW_5_Tasks.Task1();
+                    break;
+                case 2:
+                    HW_5_Tasks.Task2();
+                    break;
+                case 3:
+                    HW_5_Tasks.Task3();
+                    break;
+                case 4:
+                    HW_5_Tasks.Task4();
+                    break;
+                case 5:
+                    HW_5_Tasks.Task5();
+                    break;
+                case 6:
+                    HW_5_Tasks.Task6();
+                    break;
+                default:
+                    break;
+            }
+        }
+        #endregion
+
+        #region HW 5.1
         /// <summary>
         /// Задание 1
         /// </summary>
-        public static void Task1()
+        private static void Task1()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Перевод из десятичной в двоичную систему счисления с использованием стека");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
 
-        #region HW 2
+        #region HW 5.2
         /// <summary>
         /// Задание 2
         /// </summary>
-        public static void Task2()
+        private static void Task2()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Проверка на выделение памяти");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
 
-        #region HW 3
+        #region HW 5.3
         /// <summary>
         /// Задание 3
         /// </summary>
-        public static void Task3()
+        private static void Task3()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Скобочная последовательность");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
 
-        #region HW 4
+        #region HW 5.4
         /// <summary>
         /// Задание 4
         /// </summary>
-        public static void Task4()
+        private static void Task4()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Копирование односвязного списка");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
 
-        #region HW 5
+        #region HW 5.5
         /// <summary>
         /// Задание 5
         /// </summary>
-        public static void Task5()
+        private static void Task5()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Перевод из инфиксной записи арифметического выражения в постфиксную");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
 
-        #region HW 6
+        #region HW 5.6
         /// <summary>
         /// Задание 6
         /// </summary>
-        public static void Task6()
+        private static void Task6()
         {
-            CL.BeginApp(" ");
+            CL.BeginApp("Реализовать очередь");
 
             CL.ConsolePause();
+            Menu();
         }
         #endregion
     }
