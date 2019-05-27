@@ -44,22 +44,12 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Количество маршрутов с препятствиями");
-
-            Random rand = new Random();
             int row = 8;
             int col = 8;
-            int[,] map = new int[row, col];
-
-            for (int i = 0; i < (row * col) / 10; i++)
-            {
-                int index0 = rand.Next(row);
-                int index1 = rand.Next(col);
-                map[index0, index1] = 1;
-            }
+            int[,] map = MazeGenerator.Map(row,col);
             CL.PrintArr(map);
 
-            int[,] way = PascalTriangle.Build(8, 8, map);
-            //int[,] way = PascalTriangle.Build(8, 8);
+            int[,] way = PascalTriangle.Build(row, col, map);
             CL.PrintArr(way);
 
             CL.ConsolePause();

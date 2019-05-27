@@ -38,5 +38,19 @@ namespace HW_ClassLibrary
             }
             return maze;
         }
+
+        public static int[,] Map(int sizeRows, int sizeCols)
+        {
+            Random rand = new Random();
+            int[,] map = new int[sizeRows, sizeCols];
+
+            for (int i = 0; i < (sizeRows * sizeCols) / 10; i++)
+            {
+                int index0 = rand.Next(sizeRows);
+                int index1 = rand.Next(sizeCols);
+                map[index0, index1] = 1;
+            }
+            return map;
+        }
     }
 }
