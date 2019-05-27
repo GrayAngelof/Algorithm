@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HW_ClassLibrary
+﻿namespace HW_ClassLibrary
 {
     public static class PascalTriangle
     {
@@ -12,40 +6,68 @@ namespace HW_ClassLibrary
         {
             int[,] way = new int[row, col];
 
-            for (int j = 0; j < col; j++)
+            for (int i = 0; i < row; i++)
             {
-                way[0, j] = 1;
-            }
-
-            for (int i = 1; i < row; i++)
-            {
-                way[i, 0] = 1;
-                for (int j = 1; j < col; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    way[i, j] = way[i, j - 1] + way[i - 1, j];
-
+                    if (i == 0 || j == 0)
+                    {
+                        way[i, j] = 1;
+                    }
+                    else
+                    {
+                        way[i, j] = way[i, j - 1] + way[i - 1, j];
+                    }
                 }
             }
             return way;
         }
 
-        public static int[,] Build(int row, int col,int[,] map)
+        public static int[,] Build(int row, int col, int[,] map)
         {
             int[,] way = new int[row, col];
 
-            for (int j = 0; j < col; j++)
+            for (int i = 0; i < row; i++)
             {
-                way[0, j] = 1;
-            }
-
-            for (int i = 1; i < row; i++)
-            {
-                way[i, 0] = 1;
-                for (int j = 1; j < col; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    if (map[i,j]==0)
+                    if (map[i, j] == 0)
                     {
-                        way[i, j] = way[i, j - 1] + way[i - 1, j];
+                        if (i == 0)
+                        {
+                            if (j != 0)
+                            {
+                                if (way[i, j - 1] == 1)
+                                {
+                                    way[i, j] = 1;
+                                }
+                            }
+                            else
+                            {
+                                way[i, j] = 1;
+                            }
+                        }
+                        else if (j == 0)
+                        {
+                            if (i != 0)
+                            {
+                                if (way[i - 1, j] == 1)
+                                {
+                                    way[i, j] = 1;
+                                }
+                            }
+                            else
+                            {
+                                way[i, j] = 1;
+                            }
+                        }
+                        else
+                        {
+                            if (map[i, j] == 0)
+                            {
+                                way[i, j] = way[i, j - 1] + way[i - 1, j];
+                            }
+                        }
                     }
                 }
             }

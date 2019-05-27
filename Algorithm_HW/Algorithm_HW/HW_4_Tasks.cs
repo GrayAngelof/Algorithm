@@ -50,15 +50,16 @@ namespace Algorithm_HW
             int col = 8;
             int[,] map = new int[row, col];
 
-            for (int i = 0; i < (row*col)/10; i++)
+            for (int i = 0; i < (row * col) / 10; i++)
             {
-                int index0 = rand.Next(1,row-1);
-                int index1 = rand.Next(1,col-1);
+                int index0 = rand.Next(row);
+                int index1 = rand.Next(col);
                 map[index0, index1] = 1;
             }
             CL.PrintArr(map);
 
-            int[,] way = PascalTriangle.Build(8, 8,map);
+            int[,] way = PascalTriangle.Build(8, 8, map);
+            //int[,] way = PascalTriangle.Build(8, 8);
             CL.PrintArr(way);
 
             CL.ConsolePause();
