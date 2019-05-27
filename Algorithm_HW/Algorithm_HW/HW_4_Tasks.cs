@@ -1,5 +1,6 @@
 ﻿using HW_ClassLibrary;
 using System;
+using System.Data;
 
 namespace Algorithm_HW
 {
@@ -43,13 +44,22 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Количество маршрутов с препятствиями");
-            System.Console.WriteLine("Количество строк лабиринта:");
-            int rowsMaze = Utils.IsInt();
-            System.Console.WriteLine("Количество столбцов лабиринта:");
-            int colMaze = Utils.IsInt();
-            int[,] maze = MazeGenerator.FromDimensions(rowsMaze, colMaze);
-            CL.PrintArr(maze,true);
 
+            Random rand = new Random();
+            int row = 8;
+            int col = 8;
+            int[,] map = new int[row, col];
+
+            for (int i = 0; i < (row*col)/10; i++)
+            {
+                int index0 = rand.Next(1,row-1);
+                int index1 = rand.Next(1,col-1);
+                map[index0, index1] = 1;
+            }
+            CL.PrintArr(map);
+
+            int[,] way = PascalTriangle.Build(8, 8,map);
+            CL.PrintArr(way);
 
             CL.ConsolePause();
             Menu();
