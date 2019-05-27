@@ -7,10 +7,9 @@ namespace HW_ClassLibrary
     /// </summary>
     public static class MazeGenerator
     {
-        static float placementThreshold = .1f;    // chance of empty space
-
         public static int[,] FromDimensions(int sizeRows, int sizeCols)
         {
+            float placementThreshold = .1f;    // chance of empty space
             int[,] maze = new int[sizeRows, sizeCols];
             int rMax = maze.GetUpperBound(0);
             int cMax = maze.GetUpperBound(1);

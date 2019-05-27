@@ -1,6 +1,5 @@
 ﻿using HW_ClassLibrary;
 using System;
-using System.Data;
 
 namespace Algorithm_HW
 {
@@ -46,7 +45,7 @@ namespace Algorithm_HW
             CL.BeginApp("Количество маршрутов с препятствиями");
             int row = 8;
             int col = 8;
-            int[,] map = MazeGenerator.Map(row,col);
+            int[,] map = MazeGenerator.Map(row, col);
             CL.PrintArr(map);
 
             int[,] way = PascalTriangle.Build(row, col, map);
@@ -78,9 +77,14 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Обойти конем шахматную доску");
 
+            Queens.Zero();
+            Queens.SearchSolution(1);
+            CL.PrintArr(Queens.board);
             CL.ConsolePause();
             Menu();
         }
+        
         #endregion
+
     }
 }
