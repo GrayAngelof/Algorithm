@@ -12,7 +12,7 @@ namespace Algorithm_HW
             Console.WriteLine("Выберите задание:");
             Console.WriteLine("1 - Количество маршрутов с препятствиями");
             Console.WriteLine("2 - Длина максимальной последовательности (WIP)");
-            Console.WriteLine("3 - Обойти конем шахматную доску (WIP)");
+            Console.WriteLine("3 - Обойти конем шахматную доску");
             Console.WriteLine("0 - Выход в меню выбора уроков");
             int choice = Utils.IsInt();
 
@@ -77,9 +77,14 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Обойти конем шахматную доску");
 
-            Queens.Zero();
-            Queens.SearchSolution(1);
-            CL.PrintArr(Queens.board);
+            //Queens.Zero();
+            //Queens.SearchSolution(1);
+            //CL.PrintArr(Queens.board);
+
+
+            Horse.SearchSolution();
+
+            CL.PrintArr(Horse.board);
             CL.ConsolePause();
             Menu();
         }
