@@ -10,7 +10,7 @@ namespace Algorithm_HW
         {
             Console.Clear();
             Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Количество маршрутов с препятствиями (WIP)");
+            Console.WriteLine("1 - Количество маршрутов с препятствиями");
             Console.WriteLine("2 - Длина максимальной последовательности (WIP)");
             Console.WriteLine("3 - Обойти конем шахматную доску (WIP)");
             Console.WriteLine("0 - Выход в меню выбора уроков");
@@ -43,6 +43,13 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Количество маршрутов с препятствиями");
+            System.Console.WriteLine("Количество строк лабиринта:");
+            int rowsMaze = Utils.IsInt();
+            System.Console.WriteLine("Количество столбцов лабиринта:");
+            int colMaze = Utils.IsInt();
+            int[,] maze = MazeGenerator.FromDimensions(rowsMaze, colMaze);
+            CL.PrintArr(maze,true);
+
 
             CL.ConsolePause();
             Menu();

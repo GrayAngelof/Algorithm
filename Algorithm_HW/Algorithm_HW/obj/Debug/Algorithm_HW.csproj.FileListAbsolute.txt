@@ -8,3 +8,13 @@ D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.c
 D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csproj.CopyComplete
 D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.exe
 D:\geeckBrains\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.pdb
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.exe.config
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.exe
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\Algorithm_HW.pdb
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\HW_ClassLibrary.dll
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\bin\Debug\HW_ClassLibrary.pdb
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csprojAssemblyReference.cache
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csproj.CoreCompileInputs.cache
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.csproj.CopyComplete
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.exe
+D:\Repo\Algorithm\Algorithm_HW\Algorithm_HW\obj\Debug\Algorithm_HW.pdb

@@ -12,7 +12,7 @@ namespace Algorithm_HW
             Console.WriteLine("1 - Простые алгоритмы (WIP)");
             Console.WriteLine("2 - Асимптотическая сложность алгоритма. Рекурсия");
             Console.WriteLine("3 - Поиск в массиве. Простые сортировки");
-            Console.WriteLine("4 - Динамическое программирование. Поиск возвратом (WIP)");
+            Console.WriteLine("4 - Динамическое программирование. Поиск возвратом");
             Console.WriteLine("5 - Динамические структуры данных (WIP)");
             Console.WriteLine("6 - Деревья (WIP)");
             Console.WriteLine("7 - Графы. Алгоритмы на графах (WIP)");

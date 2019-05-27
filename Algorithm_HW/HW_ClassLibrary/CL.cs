@@ -29,7 +29,7 @@ namespace HW_ClassLibrary
         }
 
         /// <summary>
-        /// Вывод на экран массива
+        /// Вывод на экран одномерного массива
         /// </summary>
         /// <param name="array">Заданый массив</param>
         public static void PrintArr(int[] array)
@@ -40,6 +40,48 @@ namespace HW_ClassLibrary
                 Console.Write(" ");
             }
             Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Вывод на экран двумерного массива
+        /// </summary>
+        /// <param name="array">Заданый массив</param>
+        public static void PrintArr(int[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    Console.Write(array[i,j]);
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Вывод на экран двумерного лабиринта
+        /// </summary>
+        /// <param name="array">Заданый массив</param>
+        public static void PrintArr(int[,] array, bool flag)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(1); j++)
+                {
+                    //Console.Write(array[i, j]);
+                    if (Convert.ToString(array[i, j]) == "1")
+                    {
+                        //Console.Write((char)65);
+                        Console.Write(Encoding.GetEncoding(1251).GetString(new byte[] { 2 })[0]);
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
