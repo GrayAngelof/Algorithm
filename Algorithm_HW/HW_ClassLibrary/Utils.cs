@@ -25,5 +25,31 @@ namespace HW_ClassLibrary
             } while (!isNum);
             return intNum;
         }
+
+        /// <summary>
+        /// Обмен значений между двумя переменными
+        /// </summary>
+        /// <param name="var1">Переменная 1</param>
+        /// <param name="var2">Переменная 2</param>
+        public static void Swap(ref int var1, ref int var2)
+        {
+            var1 = var1 + var2;
+            var2 = var2 - var1;
+            var2 = -var2;
+            var1 = var1 - var2;
+        }
+
+        /// <summary>
+        /// Заполнение массива случайными значениями
+        /// </summary>
+        /// <param name="array">Заполняемый массив</param>
+        public static void RandArray(int[] array)
+        {
+            Random rand = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next(0, 1000);
+            }
+        }
     }
 }
