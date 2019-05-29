@@ -45,7 +45,7 @@ namespace Algorithm_HW
             CL.BeginApp("Функция перевода из десятичной системы в двоичную");
             Console.WriteLine("Ведите десятичное число:");
             int intNum = Utils.IsInt();
-            HW2Libr.DecToBin(intNum);
+            HWLibr.DecToBin(intNum);
             CL.ConsolePause();
             Menu();
         }

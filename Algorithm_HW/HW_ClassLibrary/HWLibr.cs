@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HW_ClassLibrary
 {
-    public class HW2Libr
+    public class HWLibr
     {
         public static void DecToBin(int n)
         {
@@ -25,6 +22,21 @@ namespace HW_ClassLibrary
                 DecToBin(n / 2);
                 int res = n % 2;
                 Console.Write(res);
+            }
+        }
+
+        public static void DecToBinStack(int n)
+        {
+            var stack = new Stack<int>();
+            while (n > 0)
+            {
+                stack.Push(n % 2);
+                n /= 2;
+            }
+
+            while (stack.Count > 0)
+            {
+                Console.Write(stack.Pop());
             }
         }
     }
