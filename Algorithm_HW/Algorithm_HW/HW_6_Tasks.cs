@@ -1,5 +1,6 @@
 ﻿using HW_ClassLibrary;
 using System;
+using System.Runtime.InteropServices;
 
 namespace Algorithm_HW
 {
@@ -10,8 +11,8 @@ namespace Algorithm_HW
         {
             Console.Clear();
             Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Реализовать простейшую хеш-функцию (WIP)");
-            Console.WriteLine("2 - Переписать программу, реализующую двоичное дерево поиска (WIP)");
+            Console.WriteLine("1 - Реализовать простейшую хеш-функцию");
+            Console.WriteLine("2 - Переписать программу, реализующую двоичное дерево поиска");
             Console.WriteLine("3 - Разработать базу данных студентов (WIP)");
             Console.WriteLine("0 - Выход в меню выбора уроков");
             int choice = Utils.IsInt();
@@ -43,6 +44,10 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Реализовать простейшую хеш-функцию");
+            System.Console.WriteLine("Ведите строку:");
+            string s = Console.ReadLine();
+            int res = MyHash.Hash(s);
+            Console.WriteLine(res);
 
             CL.ConsolePause();
             Menu();
@@ -56,6 +61,31 @@ namespace Algorithm_HW
         private static void Task2()
         {
             CL.BeginApp("Переписать программу, реализующую двоичное дерево поиска");
+
+            BinaryTree<int> integerTree = new BinaryTree<int>();
+            Random rand = new Random();
+
+            for (int i = 0; i < 20; i++)
+            {
+                int value = rand.Next(100);
+                integerTree.Add(value);
+            }
+
+            Console.WriteLine("Number of nodes is {0}", integerTree.Count);
+            Console.WriteLine("Max value is {0}", integerTree.MaxValue);
+            Console.WriteLine("Min value is {0}", integerTree.MinValue);
+            Console.WriteLine("Pre-order traversal:");
+            Console.WriteLine(string.Join(" ", integerTree.Preorder()));
+            Console.WriteLine("In-order traversal:");
+            Console.WriteLine(string.Join(" ", integerTree.Inorder()));
+            Console.WriteLine("Post-order traversal:");
+            Console.WriteLine(string.Join(" ", integerTree.Postorder()));
+            Console.WriteLine("Level-order traversal:");
+            Console.WriteLine(string.Join(" ", integerTree.Levelorder()));
+            Console.WriteLine("Default traversal (inorder):");
+            foreach (int n in integerTree)
+                Console.Write("{0} ", n);
+            Console.WriteLine();
 
             CL.ConsolePause();
             Menu();
