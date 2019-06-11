@@ -11,7 +11,7 @@ namespace Algorithm_HW
             Console.Clear();
             Console.WriteLine("Выберите задание:");
             Console.WriteLine("1 - Сортировка подсчетом");
-            Console.WriteLine("2 - Быстрая сортировка(WIP)");
+            Console.WriteLine("2 - Быстрая сортировка");
             Console.WriteLine("3 - Сортировка слиянием(WIP)");
             Console.WriteLine("4 - Сортировка со списком (WIP)");
             Console.WriteLine("0 - Выход в меню выбора уроков");
@@ -68,7 +68,11 @@ namespace Algorithm_HW
         private static void Task2()
         {
             CL.BeginApp("Быстрая сортировка");
-
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            Utils.RandArray(array);
+            Sort.quickSort(array);
             CL.ConsolePause();
             Menu();
         }
