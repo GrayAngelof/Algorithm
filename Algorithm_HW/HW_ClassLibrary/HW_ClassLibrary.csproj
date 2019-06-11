@@ -57,7 +57,6 @@
     <Compile Include="Search.cs" />
     <Compile Include="SearchGraph.cs" />
     <Compile Include="Sort.cs" />
-    <Compile Include="temp.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Waybill.cs" />
   </ItemGroup>

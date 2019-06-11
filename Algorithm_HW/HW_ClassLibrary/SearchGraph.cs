@@ -75,7 +75,7 @@ namespace HW_ClassLibrary
             size = matrix.GetLength(0);
             used = new bool[size];
             path= new Stack<int>();
-            int randomVertex = 0;//rand.Next(0, size);
+            int randomVertex = rand.Next(0, size);
 
             for (int i = 0; i < size; i++)
             {
@@ -89,7 +89,7 @@ namespace HW_ClassLibrary
         {
             used[vertex] = true;
             path.Push(vertex);
-            Console.WriteLine("Начинаем обход с {0} узла", vertex + 1);
+            Console.WriteLine("Начинаем обход {0} узла", vertex + 1);
 
             for (int i = 0; i < size; i++)
             {
@@ -97,30 +97,13 @@ namespace HW_ClassLibrary
                 {
                     if (!used[i])
                     {
+                        Console.WriteLine("Нашли узел {0}, добавили в стек", i + 1);
                         DFSRec(i);
+                        Console.WriteLine("Прошли узел {0}, убрали из стека", i + 1);
                         path.Pop();
-                        //Console.WriteLine("Нашли узел {0}, добавили в очередь", i + 1);
                     }
                 }
             }
-
-
-            //for (int i = 0; i < size; i++)
-            //{
-            //    source[vertex] =0 ;
-            //    if (!used[i])
-            //    {
-            //        DFSRec(i);
-            //        path.Pop(); // не забываем извлекать уже проверенные вершины
-            //    }
-            //}
-
-            //foreach (int i in source[vertex].NodeLinks)
-            //    if (marks[i] == false)
-            //    {
-            //        DFSRec(i);
-            //        path.Pop(); // не забываем извлекать уже проверенные вершины
-            //    }
         }
         #endregion
     }
