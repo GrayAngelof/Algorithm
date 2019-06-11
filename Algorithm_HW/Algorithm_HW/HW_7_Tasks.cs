@@ -10,9 +10,9 @@ namespace Algorithm_HW
         {
             Console.Clear();
             Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Считывать матрицу смежности из файла (WIP)");
-            Console.WriteLine("2 - Рекурсивная функция обхода графа в глубину (WIP)");
-            Console.WriteLine("3 - Функция обхода графа в ширину (WIP)");
+            Console.WriteLine("1 - Считывать матрицу смежности из файла");
+            Console.WriteLine("2 - Рекурсивная функция обхода графа в глубину");
+            Console.WriteLine("3 - Функция обхода графа в ширину");
             Console.WriteLine("0 - Выход в меню выбора уроков");
             int choice = Utils.IsInt();
 
@@ -44,6 +44,10 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Считывать матрицу смежности из файла");
 
+            string filename = @"..\..\..\TxtFiles\matrix.txt";
+            int[,] matrix = ReadMatrix.Read(filename);
+
+            CL.PrintArr(matrix);
             CL.ConsolePause();
             Menu();
         }
@@ -57,6 +61,12 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Рекурсивная функция обхода графа в глубину");
 
+            string filename = @"..\..\..\TxtFiles\WorkMatrix.txt";
+            int[,] matrix = ReadMatrix.Read(filename);
+            CL.PrintArr(matrix);
+            SearchGraph search = new SearchGraph();
+            search.DFS(matrix);
+            //SearchGraph.DFS(matrix);
             CL.ConsolePause();
             Menu();
         }
@@ -70,6 +80,12 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Функция обхода графа в ширину");
 
+            string filename = @"..\..\..\TxtFiles\WorkMatrix.txt";
+            int[,] matrix = ReadMatrix.Read(filename);
+            CL.PrintArr(matrix);
+            SearchGraph search = new SearchGraph();
+            search.BFS(matrix);
+            //SearchGraph.BFS(matrix);
             CL.ConsolePause();
             Menu();
         }

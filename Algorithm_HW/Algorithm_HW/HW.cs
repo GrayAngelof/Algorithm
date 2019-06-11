@@ -14,8 +14,8 @@ namespace Algorithm_HW
             Console.WriteLine("3 - Поиск в массиве. Простые сортировки");
             Console.WriteLine("4 - Динамическое программирование. Поиск возвратом");
             Console.WriteLine("5 - Динамические структуры данных");
-            Console.WriteLine("6 - Деревья (WIP)");
-            Console.WriteLine("7 - Графы. Алгоритмы на графах (WIP)");
+            Console.WriteLine("6 - Деревья");
+            Console.WriteLine("7 - Графы. Алгоритмы на графах");
             Console.WriteLine("8 - Сложные сортировки (WIP)");
             int choice = Utils.IsInt();
 
