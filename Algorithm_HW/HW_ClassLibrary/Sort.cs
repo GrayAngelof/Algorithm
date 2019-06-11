@@ -92,5 +92,29 @@
             }
             System.Console.WriteLine($"Количество итерраций:{count}");
         }
+
+        /// <summary>
+        /// Сортировка подсчетом
+        /// </summary>
+        /// <param name="array">Сортируемый массив</param>
+        /// <param name="val">Максимальное значение элемента массива</param>
+        public static void CountingSort(int[] array, int val)
+        {
+            int[] frequencyArray= new int[val];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                frequencyArray[array[i]]++;
+            }
+
+            int b = 0;
+            for (int j = 0; j < val; j++)
+            {
+                for (int i = 0; i < frequencyArray[j]; i++)
+                {
+                    array[b++] = j;
+                }
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Algorithm_HW
             Console.WriteLine("5 - Динамические структуры данных");
             Console.WriteLine("6 - Деревья");
             Console.WriteLine("7 - Графы. Алгоритмы на графах");
-            Console.WriteLine("8 - Сложные сортировки (WIP)");
+            Console.WriteLine("8 - Сложные сортировки");
             int choice = Utils.IsInt();
 
             switch (choice)

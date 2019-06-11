@@ -10,7 +10,7 @@ namespace Algorithm_HW
         {
             Console.Clear();
             Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Сортировка подсчетом(WIP)");
+            Console.WriteLine("1 - Сортировка подсчетом");
             Console.WriteLine("2 - Быстрая сортировка(WIP)");
             Console.WriteLine("3 - Сортировка слиянием(WIP)");
             Console.WriteLine("4 - Сортировка со списком (WIP)");
@@ -47,7 +47,15 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Сортировка подсчетом");
-
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            System.Console.WriteLine("Максимальное значение элемента:");
+            int val = Utils.IsInt();
+            Utils.RandArray(array,val+1);
+            CL.PrintArr(array);
+            Sort.CountingSort(array,val+1);
+            CL.PrintArr(array);
             CL.ConsolePause();
             Menu();
         }

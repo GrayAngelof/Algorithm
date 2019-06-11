@@ -51,5 +51,14 @@ namespace HW_ClassLibrary
                 array[i] = rand.Next(0, 1000);
             }
         }
+
+        public static void RandArray(int[] array, int val)
+        {
+            Random rand = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next(0, val);
+            }
+        }
     }
 }
