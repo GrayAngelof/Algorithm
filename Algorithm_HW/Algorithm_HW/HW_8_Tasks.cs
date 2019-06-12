@@ -12,7 +12,7 @@ namespace Algorithm_HW
             Console.WriteLine("Выберите задание:");
             Console.WriteLine("1 - Сортировка подсчетом");
             Console.WriteLine("2 - Быстрая сортировка");
-            Console.WriteLine("3 - Сортировка слиянием(WIP)");
+            Console.WriteLine("3 - Сортировка слиянием");
             Console.WriteLine("4 - Сортировка со списком (WIP)");
             Console.WriteLine("0 - Выход в меню выбора уроков");
             int choice = Utils.IsInt();
@@ -71,8 +71,10 @@ namespace Algorithm_HW
             System.Console.WriteLine("Количество элементов массива:");
             int amount = Utils.IsInt();
             int[] array = new int[amount];
-            Utils.RandArray(array);
-            Sort.quickSort(array);
+            Utils.RandArray(array,10);
+            int start = 0;
+            int end = array.Length-1;
+            Sort.QuickSort(array,start,end);
             CL.ConsolePause();
             Menu();
         }
@@ -86,6 +88,11 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Сортировка слиянием");
 
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            Utils.RandArray(array, 10);
+            Sort.MergeSort(array);
             CL.ConsolePause();
             Menu();
         }

@@ -1,4 +1,7 @@
-﻿namespace HW_ClassLibrary
+﻿using System;
+using System.Linq;
+
+namespace HW_ClassLibrary
 {
     public class Sort
     {
@@ -116,45 +119,93 @@
                 }
             }
         }
-
-        public static void quickSort(int[] array)
+        /// <summary>
+        /// Сортировка Хоара
+        /// </summary>
+        /// <param name="array">Сортируемый массив</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        public static void QuickSort(int[] array, int start, int end)
         {
-
+            if (start >= end)
+            {
+                return;
+            }
+            int pivot = Partition(array, start, end);
+            QuickSort(array, start, pivot - 1);
+            QuickSort(array, pivot + 1, end);
         }
 
-        int partition(int[] array, int start, int end)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        /// <returns></returns>
+        private static int Partition(int[] array, int start, int end)
         {
-            int temp;//swap helper
-            int marker = start;//divides left and right subarrays
+            int temp;
+            int marker = start;
             for (int i = start; i <= end; i++)
             {
-                if (array[i] < array[end]) //array[end] is pivot
+                if (array[i] < array[end]) 
                 {
-                    temp = array[marker]; // swap
+                    temp = array[marker];
                     array[marker] = array[i];
                     array[i] = temp;
                     marker += 1;
                 }
             }
-            //put pivot(array[end]) between left and right subarrays
+
             temp = array[marker];
             array[marker] = array[end];
             array[end] = temp;
             return marker;
         }
 
-        void quicksort(int[] array, int start, int end)
+
+        /// <summary>
+        /// Сортировка слиянием
+        /// </summary>
+        /// <param name="array">Сортируемый массив</param>
+        /// <param name="start"></param>
+        /// <param name="end"></param>
+        public static int[] MergeSort(int[] array)
         {
-            if (start >= end)
+            if (array.Length == 1)
             {
-                return;
+                return array;
             }
-            int pivot = partition(array, start, end);
-            quicksort(array, start, pivot - 1);
-            quicksort(array, pivot + 1, end);
+
+            int middle = array.Length / 2;
+            return Merge(MergeSort(array.Take(middle).ToArray()), MergeSort(array.Skip(middle).ToArray()));
         }
 
+        /// <summary>
+        /// Слияние двух массивов для сортировки слиянием
+        /// </summary>
+        /// <param name="array1">Массив 1</param>
+        /// <param name="array2">Массив 2</param>
+        /// <returns></returns>
+        static int[] Merge(int[] array1, int[] array2)
+        {
+            int ptr1 = 0, ptr2 = 0;
+            int[] merged = new int[array1.Length + array2.Length];
 
+            for (int i = 0; i < merged.Length; ++i)
+            {
+                if (ptr1 < array1.Length && ptr2 < array2.Length)
+                {
+                    merged[i] = array1[ptr1] > array2[ptr2] ? array2[ptr2++] : array1[ptr1++];
+                }
+                else
+                {
+                    merged[i] = ptr2 < array2.Length ? array2[ptr2++] : array1[ptr1++];
+                }
+            }
 
+            return merged;
+        }
     }
 }
