@@ -10,9 +10,9 @@ namespace Algorithm_HW
         {
             Console.Clear();
             Console.WriteLine("Выберите задание:");
-            Console.WriteLine("1 - Сортировка подсчетом(WIP)");
-            Console.WriteLine("2 - Быстрая сортировка(WIP)");
-            Console.WriteLine("3 - Сортировка слиянием(WIP)");
+            Console.WriteLine("1 - Сортировка подсчетом");
+            Console.WriteLine("2 - Быстрая сортировка");
+            Console.WriteLine("3 - Сортировка слиянием");
             Console.WriteLine("4 - Сортировка со списком (WIP)");
             Console.WriteLine("0 - Выход в меню выбора уроков");
             int choice = Utils.IsInt();
@@ -47,7 +47,15 @@ namespace Algorithm_HW
         private static void Task1()
         {
             CL.BeginApp("Сортировка подсчетом");
-
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            System.Console.WriteLine("Максимальное значение элемента:");
+            int val = Utils.IsInt();
+            Utils.RandArray(array,val+1);
+            CL.PrintArr(array);
+            Sort.CountingSort(array,val+1);
+            CL.PrintArr(array);
             CL.ConsolePause();
             Menu();
         }
@@ -60,7 +68,13 @@ namespace Algorithm_HW
         private static void Task2()
         {
             CL.BeginApp("Быстрая сортировка");
-
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            Utils.RandArray(array,10);
+            int start = 0;
+            int end = array.Length-1;
+            Sort.QuickSort(array,start,end);
             CL.ConsolePause();
             Menu();
         }
@@ -74,6 +88,11 @@ namespace Algorithm_HW
         {
             CL.BeginApp("Сортировка слиянием");
 
+            System.Console.WriteLine("Количество элементов массива:");
+            int amount = Utils.IsInt();
+            int[] array = new int[amount];
+            Utils.RandArray(array, 10);
+            Sort.MergeSort(array);
             CL.ConsolePause();
             Menu();
         }
